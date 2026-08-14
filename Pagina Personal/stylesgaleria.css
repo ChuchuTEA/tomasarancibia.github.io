@@ -1,0 +1,180 @@
+/* --- Estilos de la Galería tipo IG --- */
+.gallery-grid {
+    display: grid;
+    /* Crea columnas automáticas que no sean menores a 220px */
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); 
+    gap: 15px; /* Espacio entre las fotos */
+    margin-top: 30px;
+    margin-bottom: 50px;
+}
+
+.gallery-item {
+    position: relative;
+    aspect-ratio: 1 / 1; /* Hace que todas las fotos sean perfectamente cuadradas */
+    overflow: hidden;
+    background-color: #f4f4f4; /* Color de fondo por si la imagen tarda en cargar */
+    border-radius: 4px; /* Bordes apenitas redondeados, muy profesional */
+    cursor: pointer;
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Recorta la imagen automáticamente para que llene el cuadrado sin deformarse */
+    transition: transform 0.4s ease; /* Suave animación al hacer zoom */
+}
+
+.gallery-item:hover img {
+    transform: scale(1.05); /* Pequeño zoom al pasar el mouse */
+}
+
+.gallery-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.8); /* Fondo negro semitransparente */
+    color: #ffffff;
+    padding: 12px;
+    font-size: 0.9em;
+    font-weight: 500;
+    box-sizing: border-box;
+    /* La descripción está oculta abajo y sube al pasar el mouse */
+    transform: translateY(100%);
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover .gallery-overlay {
+    transform: translateY(0);
+}
+
+/* --- Estilos del Modal (Pantalla completa) --- */
+.modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1000; /* Para que quede por encima de toda la página */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.9); /* Fondo negro casi sólido */
+    backdrop-filter: blur(5px); /* Desenfoque sutil del fondo (muy moderno) */
+}
+
+.modal-content {
+    margin: 50px auto;
+    display: block;
+    max-width: 90%;
+    max-height: 75vh; /* Evita que la foto sea más grande que tu pantalla */
+    object-fit: contain;
+    border-radius: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.5);
+}
+
+#modalCaption {
+    margin: auto;
+    display: block;
+    width: 80%;
+    max-width: 700px;
+    text-align: center;
+    color: #e0e0e0;
+    padding: 10px 0;
+    font-size: 1.1em;
+    font-family: monospace; /* Le da un toque técnico */
+}
+
+/* Botón de cerrar (la X) */
+.close-modal {
+    position: absolute;
+    top: 20px;
+    right: 35px;
+    color: #f1f1f1;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.close-modal:hover {
+    color: #aaaaaa;
+}
+
+/* --- Estilos de las Carpetas (Álbumes) --- */
+.folder-item {
+    position: relative;
+    aspect-ratio: 4 / 3; /* Formato más rectangular para parecer un álbum */
+    overflow: hidden;
+    background-color: #1a1a1a;
+    border-radius: 4px;
+    cursor: pointer;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.05);
+}
+
+.folder-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0.6; /* Oscurecemos un poco la foto de portada para que se lea el texto */
+    transition: opacity 0.3s ease, transform 0.4s ease;
+}
+
+.folder-item:hover img {
+    opacity: 0.9;
+    transform: scale(1.05);
+}
+
+.folder-overlay {
+    position: absolute;
+    inset: 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #ffffff;
+    pointer-events: none; /* Para que el clic pase directo a la carpeta */
+}
+
+.folder-title {
+    font-size: 1.4em;
+    font-weight: 700;
+    text-align: center;
+    letter-spacing: -0.5px;
+    text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+    padding: 0 15px;
+}
+
+.folder-count {
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 0.85em;
+    font-weight: bold;
+    margin-top: 10px;
+    background-color: #0033A0; /* Tu azul técnico */
+    padding: 4px 12px;
+    border-radius: 20px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.5);
+}
+
+/* --- Botón de Volver y Vistas --- */
+.album-view {
+    display: none; /* Ocultamos los álbumes por defecto */
+}
+
+.btn-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    padding: 8px 16px;
+    background-color: #1A1A1A;
+    color: #FFFFFF;
+    text-decoration: none;
+    font-family: 'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 0.9em;
+    border-radius: 4px;
+    cursor: pointer;
+    border: none;
+    transition: background-color 0.2s ease;
+}
+
+.btn-back:hover {
+    background-color: #0033A0; /* Se vuelve azul al pasar el mouse */
+}

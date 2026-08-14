@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Galeria</title>
+    <link rel="stylesheet" href="stylesgaleria.css">
+</head>
+<body>
+<!-- TIENES QUE ABRIR TU CONTENEDOR PRINCIPAL SI USAS EL ESTILO SUIZO -->
+    <div class="main-container" style="max-width: 900px; margin: 0 auto; padding: 50px 30px;">
+        
+        <h2>Archivos</h2>
+        <p style="color: #666666; font-family: 'Courier New', Courier, monospace; margin-bottom: 30px; font-weight: bold;">
+            PROYECTOS
+        </p>
+
+        <!-- ==========================================
+             VISTA 1: MENÚ DE CARPETAS
+             ========================================== -->
+        <div id="folders-view">
+            <div class="gallery-grid">
+                
+                <!-- Carpeta 1: Horneros -->
+                <div class="folder-item" onclick="openAlbum('album-horneros')">
+                    <img src="fotos/horneroo.jpeg" alt="Horneros">
+                    <div class="folder-overlay">
+                        <div class="folder-title">Equipo Horneros</div>
+                        <div class="folder-count">Fotos</div>
+                    </div>
+                </div>
+
+                <!-- Carpeta 2: Aviónica y PCBs -->
+                <div class="folder-item" onclick="openAlbum('album-pcbs')">
+                    <img src="fotos/Coheteee.jpeg" alt="PCBs">
+                    <div class="folder-overlay">
+                        <div class="folder-title">Proyectos General</div>
+                        <div class="folder-count">Fotos</div>
+                    </div>
+                </div>
+
+                <!-- Carpeta 3: Andes Industrias -->
+                <div class="folder-item" onclick="openAlbum('album-andes')">
+                    <img src="fotos/Andes Industrias  (1).png" alt="Andes">
+                    <div class="folder-overlay">
+                        <div class="folder-title">Andes Industrias</div>
+                        <div class="folder-count">Fotos</div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+
+        <!-- ==========================================
+             VISTA 2: ÁLBUMES ESPECÍFICOS (Ocultos al inicio)
+             ========================================== -->
+        
+        <!-- Álbum: Horneros -->
+        <div id="album-horneros" class="album-view">
+            <button class="btn-back" onclick="closeAlbums()">← Volver a las Carpetas</button>
+            <h3 style="margin-top: 0;">Registro: Equipo Horneros / Gracias a todos</h3>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="fotos/horneroo.jpeg" alt="">
+                    <div class="gallery-overlay">Horneros</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/acto.jpeg" alt="">
+                    <div class="gallery-overlay">Acto Expotech</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/ExpoTech.jpeg" alt="">
+                    <div class="gallery-overlay">Acto Expotech</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/Coheteee.jpeg" alt="">
+                    <div class="gallery-overlay">Cohete</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/aletas.jpeg" alt="">
+                <div class="gallery-overlay">Aletas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/ANILLOS CENTRADORES.jpeg" alt="">
+                    <div class="gallery-overlay">Anillos centrales</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/cohete interior.jpeg" alt="">
+                    <div class="gallery-overlay">Interior</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/Coheteeeeee.jpeg" alt="">
+                    <div class="gallery-overlay">Cohete</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/combumotor.jpeg" alt="">
+                    <div class="gallery-overlay">Combustible L1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/equipo 4.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/equipo 5.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/equipo 6.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/equipo 7.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/equipoo 3.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/equipoo.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/equipoooo.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/FUSIONES.jpeg" alt="">
+                    <div class="gallery-overlay">Anillos</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/INYECTOR.jpeg" alt="">
+                    <div class="gallery-overlay">Inyector</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/MOTORR.jpeg" alt="">
+                    <div class="gallery-overlay">Motor Ensamblado</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/OJIVAAA.jpeg" alt="">
+                    <div class="gallery-overlay">Ojiva</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/Paracaidas.jpeg" alt="">
+                    <div class="gallery-overlay">Gracias Nico</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/paracaidas 1.jpeg" alt="">
+                    <div class="gallery-overlay">Paracaidas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/paracaidas 2.jpeg" alt="">
+                    <div class="gallery-overlay">Paracaidas</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/pcb eze.jpeg" alt="">
+                    <div class="gallery-overlay">Computadora de vuelo</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/PCB .jpeg" alt="">
+                    <div class="gallery-overlay">PCB Soporte</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/TEST DE 15ML FRASCO FALCON.jpeg" alt="">
+                    <div class="gallery-overlay">Soporte de test 15ml Frasco Falcon</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/Tipazo Eze.jpeg" alt="">
+                    <div class="gallery-overlay">Equipazo</div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Álbum: PCBs -->
+        <div id="album-pcbs" class="album-view">
+            <button class="btn-back" onclick="closeAlbums()">← Volver a las Carpetas</button>
+            <h3 style="margin-top: 0;">Registro: Proyectos General</h3>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="fotos/Coheteee.jpeg" alt="">
+                    <div class="gallery-overlay">Cohete L1</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/cohete interior.jpeg" alt="">
+                    <div class="gallery-overlay">Cohete Interior</div>
+                </div>
+                <!-- Agrega aquí más fotos de PCBs -->
+            </div>
+        </div>
+
+        <!-- Álbum: Andes Industrias -->
+        <div id="album-andes" class="album-view">
+            <button class="btn-back" onclick="closeAlbums()">← Volver a las Carpetas</button>
+            <h3 style="margin-top: 0;">Registro: Andes Industrias</h3>
+            
+            <div class="gallery-grid">
+                <div class="gallery-item">
+                    <img src="fotos/Andes Industrias  (1).png" alt="">
+                    <div class="gallery-overlay">Andes Industrias</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/Pluma.jpeg" alt="">
+                    <div class="gallery-overlay">Primeros Avances</div>
+                </div>
+                <div class="gallery-item">
+                    <img src="fotos/Pluma.jpeg" alt="">
+                    <div class="gallery-overlay">Primeros Avances</div>
+                </div>
+                <!-- Agrega aquí más fotos de Andes Industrias -->
+            </div>
+        </div>
+
+    </div> <!-- Cierre del Main Container -->
+
+
+    <!-- ==========================================
+         MODAL DE PANTALLA COMPLETA
+         ========================================== -->
+    <div id="imageModal" class="modal">
+        <span class="close-modal">&times;</span>
+        <img class="modal-content" id="fullImage">
+        <div id="modalCaption"></div>
+    </div>
+
+    <!-- Script de navegación y Modal -->
+    <script>
+        /* --- LÓGICA DE CARPETAS --- */
+        function openAlbum(albumId) {
+            // Oculta la vista de carpetas
+            document.getElementById('folders-view').style.display = 'none';
+            // Muestra el álbum específico
+            document.getElementById(albumId).style.display = 'block';
+        }
+
+        function closeAlbums() {
+            // Oculta todos los álbumes
+            const albums = document.querySelectorAll('.album-view');
+            albums.forEach(album => album.style.display = 'none');
+            // Vuelve a mostrar las carpetas
+            document.getElementById('folders-view').style.display = 'block';
+        }
+
+        /* --- LÓGICA DEL MODAL DE FOTOS (La que ya tenías) --- */
+        const modal = document.getElementById("imageModal");
+        const modalImg = document.getElementById("fullImage");
+        const captionText = document.getElementById("modalCaption");
+        const closeBtn = document.querySelector(".close-modal");
+
+        // Usamos delegación de eventos para que funcione con las fotos dentro de las carpetas
+        document.addEventListener('click', function(e) {
+            const galleryItem = e.target.closest('.gallery-item');
+            
+            // Si hacemos clic en una foto
+            if (galleryItem) {
+                modal.style.display = "block"; 
+                const img = galleryItem.querySelector("img");
+                const caption = galleryItem.querySelector(".gallery-overlay").innerText;
+                modalImg.src = img.src;
+                captionText.innerText = caption;
+            }
+            
+            // Si hacemos clic en la X para cerrar el modal
+            if (e.target === closeBtn) {
+                modal.style.display = "none";
+            }
+
+            // Si hacemos clic en lo negro fuera de la foto
+            if (e.target === modal) {
+                modal.style.display = "none";
+            }
+        });
+    </script>
+</body>
+</html>
